@@ -11,6 +11,14 @@ export class App extends Component {
       date: new Date().toLocaleString(),
     };
   }
+  componentDidMount() {
+    setInterval(() => {
+      console.log("TimeScreen ComponentDidMount"),
+        this.setState({
+          date: new Date().toLocaleString()
+        });
+    }, 1000);
+  }
 
   render() {
     return (
